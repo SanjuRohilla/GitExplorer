@@ -1,3 +1,14 @@
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+  
+  body {
+    -ms-overflow-style:none;
+  }
 
 body {
     font-family: "Roboto", sans-serif;
@@ -5,13 +16,18 @@ body {
     padding: 0;
     background-color: #f5f7fa;
     color: #333;
+    width: inherit;
+    /* overflow: hidden; */
    
   }
   
   .navbar {
-    background-color: #251d72;
+    /* background-color: #251d72; */
+    background-color: #000000;
     color: white;
     padding: 10px 20px;
+    width: inherit;
+    /* padding-top: 0.5rem; */
   }
   
   .navbar-container {
@@ -21,12 +37,17 @@ body {
   }
   
   .navbar-brand {
-    font-size: 1.5em;
+    font-size: 3.5em;
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    color: white; 
+    
+    -webkit-text-stroke: 1px white;
   }
   
+  .navbar-brand:hover{
+    background-color: black;
+  }
   .navbar-menu {
     list-style: none;
     margin: 0;
@@ -46,10 +67,13 @@ body {
   }
   
   .hero-section {
-    background-color: #251d72;
+    /* background-color: #251d72; */
+    background-color: #000000;
     color: white;
     text-align: center;
-    padding: 50px 90px;
+    padding: 50px 90px; 
+    width: inherit;
+    /* width: 100vw; */
   }
   
   .hero-section h1 {
@@ -63,8 +87,9 @@ body {
   }
   
   .container {
-    width: 100%;
-    max-width: 1200px;
+    /* width: 100%; */
+    /* max-width: 1200px; */
+    width: inherit; 
     background-color: white;
     padding: 30px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -74,7 +99,7 @@ body {
   
   .container h1{
       margin-top: 40px;
-      color: #bf00ff;
+      color: #040605;
       margin-bottom: 40px;
   }
   .controls {
@@ -114,7 +139,8 @@ body {
   }
   
   .controls button:hover {
-    background-color: #c3f802;
+    /* background-color: #c3f802; */
+    background-color: #f6fe03;
     color: #333;
     font-weight: 900;
   }
@@ -138,7 +164,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    height:100vh;
+    /* height:100vh; */
+    height: max-content;
+    margin-bottom: 5rem;
   }
   
   .repository-card {
@@ -190,7 +218,8 @@ body {
   }
   
   .repository-card .flip-card-front {
-    background-color: #251d72;
+    /*background-color: #251d72; */
+     background-color: #000000; 
     color: white;
   }
   
@@ -226,15 +255,19 @@ body {
   
   /* CSS */
   footer.footer {
-    position: fixed;
+    /* position: fixed; */
+    /* position: relative; */
+    
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: inherit;
+    width: 100vw;
     z-index:100;
-    background-color: #251d72;
+    /* background-color: #251d72; */
+    background-color: #000000;
     color: white;
     text-align: left;
-   
+   width: inherit;
   }
   
   footer.footer .footer-container {
@@ -310,7 +343,8 @@ body {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #251d72;
+    /* background-color: #251d72; */
+    background-color: #000000;
     color: white;
     cursor: pointer;
     font-size: 1em;
@@ -319,7 +353,8 @@ body {
   }
   
   .contact-section button:hover {
-    background-color: #251d72;
+    /* background-color: #251d72; */
+    background-color: #000000;
   }
   
   @media (max-width: 768px) {
@@ -345,4 +380,38 @@ body {
       text-align: center;
       margin-top: 10px;
     }
+    .navbar-brand{
+      font-size: 1.5rem;
+    }
   }
+
+  @media only screen and (max-width: 320px) {
+     /* .navbar-container{
+      flex-direction: column;
+    }  */
+    .navbar-brand{
+      font-size: 1.5rem;
+    }
+    .navbar-menu{
+      display: flex;
+      flex-direction: column;
+    }
+     #myform{
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    } 
+    form{
+      text-align: left;
+      background-color: #000000;
+      color: white;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      
+    }
+     input{
+      width: min-content;
+    }
+
+    }
+
