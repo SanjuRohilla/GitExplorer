@@ -246,9 +246,10 @@ body {
   }
   
   .repository-card .flip-card-back {
-    background-color: #f9f9f9;
-    color: #000000;
+    background-color: #000000;
+    color: hsl(0, 100%, 100%);
     transform: rotateY(180deg);
+    border: #e6c924 2px;
     text-align: left;
   }
   
